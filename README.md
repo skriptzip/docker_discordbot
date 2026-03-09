@@ -1,4 +1,4 @@
-# 🤖 Discord Bot - Modern Python Framework
+# <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d80db9971f10a9757c99_Symbol.svg" height="32" style="vertical-align:middle; margin-right:8px;"/> Discord Bot Template
 
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com)
 [![Python](https://img.shields.io/badge/Python-3.11-green.svg)](https://python.org)
@@ -40,7 +40,7 @@ docker-compose logs -f
 
 ```
 discordbot/
-├── bot/                        # Bot code (volume mapped)
+├── bot/
 │   ├── bot.py                  # Main bot file
 │   ├── example_commands.py     # Example slash commands
 │   ├── bot_logging/            # Colored logging system
@@ -104,40 +104,3 @@ docker-compose logs -f
 tail -f ./data/logs/bot.log
 tail -f ./data/logs/discord.log
 ```
-
-## 🛠️ Troubleshooting
-
-### Container Issues
-```bash
-# Rebuild and restart
-docker-compose down && docker-compose up --build -d
-
-# Check status
-docker-compose ps
-```
-
-### Command Registration
-```bash
-# Commands not showing? Check logs for sync issues
-docker-compose logs discordbot | grep -i sync
-```
-
-### Permissions
-```bash
-# Fix file permissions (Linux/Mac)
-sudo chown -R $(whoami):$(whoami) ./bot ./data
-```
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-**[⬆ Back to Top](#-discord-bot---modern-python-bot-framework)**
-
-Made with ❤️ by <a href="https://github.com/skriptzip">skript.zip</a>
-
-</div>
